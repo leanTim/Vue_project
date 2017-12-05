@@ -2,7 +2,7 @@
   <div>
 
     <mt-header title="信息管理中心"></mt-header>
-    <router-view></router-view>
+    <router-view class="tmpl"></router-view>
     <!-- 底部导航 -->
     <mt-tabbar v-model="selected">
       <mt-tab-item id="Home">
