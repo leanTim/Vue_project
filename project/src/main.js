@@ -30,15 +30,21 @@ Vue.use(MintUi)
 
 //引入页面样式文件 
 import './static/css/global.css'
+//引入vue preview组件
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
 
 //引入自己的组件
 import App from './components/App.vue'
 import Home from './components/Home/Home.vue'
-//引入底部导航的组件
+
 import Members from './components/Members/Members.vue'
 import ShopCart from './components/ShopCart/ShopCart.vue'
 import Find from './components/Find/Find.vue'
 import NewsList from './components/NewsList/NewsList.vue'
+import Share from './components/Photo/Share.vue'
+import PhotoDetail from './components/Photo/PhotoDetail.vue'
+import NewsDetail from './components/NewsList/NewsDetail.vue'
 
 
 //注册全局组件
@@ -63,6 +69,9 @@ router.addRoutes([
   {name: 'ShopCart', path: '/shopcart', component: ShopCart},
   {name: 'Find', path: '/find', component: Find},
   {name: 'News.list', path: '/news/list', component: NewsList},
+  {name: 'news.detail', path: 'news/detail', component: NewsDetail},
+  {name: 'photo.share', path: '/photo/share/:categoryId', component: Share},
+  {name: 'photo.detail', path: '/ptoto/detail/:id', component: PhotoDetail},
 ])
 
 new Vue({
